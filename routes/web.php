@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +13,21 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-// Route::get('/about', function(){
-//     return "<h3>This is the about page. New Info here.</h3>";
-//     });
+Route::get('/about', function () {
+    return view('about');
+});
 
-// Route::get('/contact', function(){
-//     return "<h4>This is the contact page </h4>";
-// });
+Route::get('/contact', function () {
+    return view('contact');
+});
 
-Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/about', [HomeController::class, 'about']);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('/contact', [HomeController::class, 'contact']);
+require __DIR__.'/auth.php';

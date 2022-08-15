@@ -1,0 +1,12 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav-class {
+    display:flex ; 
+                position: absolute;
+                left: 20px;
+                width: 100px;
+                height: 120px;
+                top: 10px;
+}
