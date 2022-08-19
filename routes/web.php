@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/posts', [PostsController::class, 'create']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

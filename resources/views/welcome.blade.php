@@ -2,18 +2,22 @@
 
 @section('title', 'Home')
 
+<div class="d-flex justify-content-between align-items-baseline" >
+<!-- @section('date') -->
 @section('content')
-
-    <div style="padding: 10px 5px 5px 50px;">
-@section('date')
     <div style=" text-align:right; padding-top: 20px; padding-right: 20px">
-    <p>
-        <?php
-            echo   date('l') . ", ". date('F j, Y')  ; 
-         ?> 
-    </p>
-     </div>
-         <h2 style=" text-align:center">This is the home Page. </h2>
+        <p>
+        {{date('l') . ", ". date('F j, Y')}}     
+         
+        </p>
+    </div>
+
+
+
+<div style="padding: 10px 5px 5px 50px">
+        <div style="padding: 10px 5px 5px 50px;">
+          <h2 style=" text-align:center">This is the home Page. </h2>
+        </div>
     </div>
 
     <div  style="display: flex; justify-content: center;">
@@ -22,3 +26,4 @@
     </div>
            
 @endsection
+</div>

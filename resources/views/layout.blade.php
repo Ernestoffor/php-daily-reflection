@@ -48,8 +48,8 @@
             </nav> 
             </header>
            </div>
-           @yield('date'); 
-           @yield('content');
+           @yield('date')
+           @yield('content')
            
         </div>
     </body>
