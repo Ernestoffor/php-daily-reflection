@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\PostsController;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', [HomeController::class, 'index']);
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -26,7 +29,9 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/posts', [PostsController::class, 'create']);
+Route::get('/posts/create', [PostsController::class, 'create']);
+
+Route::post('/posts', [PostsController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

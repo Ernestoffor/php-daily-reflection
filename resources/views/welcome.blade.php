@@ -24,6 +24,6 @@
         <img src="/assets/church1.jpeg" style="padding: 5px 50px 5px 50px ; height:300px; 
                 width: 500px ">
     </div>
-           
+  
 @endsection
 </div>

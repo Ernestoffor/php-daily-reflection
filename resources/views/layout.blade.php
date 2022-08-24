@@ -41,13 +41,17 @@
             <header>
             <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="navbar-brand justify-left nav-class" >
-                <div style="padding-right: 15px;"> <a href="/">Home</a> </div>
+                <div style="padding-right: 15px;"> <a href="/home">Home</a> </div>
                 <div style="padding-right: 15px;" > <a href="/about">About</a></div>
                 <div style="padding-left: 15px;"> <a href="/contact">Contact</a> </div>
             </div>
             </nav> 
             </header>
            </div>
+           <br>
+           <br>
+           <br>
+           <br>
            @yield('date')
            @yield('content')
            
